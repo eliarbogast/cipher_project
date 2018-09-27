@@ -6,18 +6,25 @@ Names: Eli Arbogast and Drew Garcia
 '''
 
 def main():
+#Vignere Cipher
+    print("* * * VIGNERE CIPHER * * *")
+
 #Prompt user to enter the message to be encoded
-  message = input("Enter the message you want encoded: ")
+    originalMessage = input("Enter the message you want encoded: ")
 
 #Prompt user to enter the password for encoding
-  password = input("Enter a password to encrypt this message: ")
+    password = input("Enter a password to encrypt this message: ")
 
 #Clean up both user inputs
-  message = message.lower()
-  message = message.replace(" ", "")
-  password = password.lower()
-  password = password.replace(" ", "")
+    originalMessage = message.lower()
+    originalMessage = message.replace(" ", "")
+    password = password.lower()
+    password = password.replace(" ", "")
 
+#String to store encrypted characters
+    encryptedMessage = " "
+
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
  
 
   
