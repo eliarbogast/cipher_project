@@ -35,8 +35,19 @@ def main():
 	for i in range(len(originalMessage)):
 		encryptedChar = (alpha.index(originalMessage[i]) + alpha.index(password[i])) % 26
 		encryptedMessage = encryptedMessage + alpha[encryptedChar]
+		
+#Print encryptedMessage for the user
+	print("Your encrypted message is: ", encryptedMessage)
 
-	print(encryptedMessage)
+#String to store decrypted characters
+	decryptedMessage = " "
+
+#Loop to decrypt message
+	for i in range(len(encryptedMessage)):
+		decryptedChar = (alpha.index(encryptedMessage[i]) + alpha.index(password[i])) % 26
+		decryptedMessage = decryptedMessage + alpha[-(decryptedChar)]
+
+	print(decryptedMessage)
 
 
 
