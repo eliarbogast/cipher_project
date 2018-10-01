@@ -14,17 +14,29 @@ def main():
 
 #Prompt user to enter the password for encoding
     password = input("Enter a password to encrypt this message: ")
-
+    
 #Clean up both user inputs
-    originalMessage = message.lower()
-    originalMessage = message.replace(" ", "")
+    originalMessage = originalMessage.lower()
+    originalMessage = originalMessage.replace(" ", "")
     password = password.lower()
     password = password.replace(" ", "")
 
 #String to store encrypted characters
     encryptedMessage = " "
 
+#Alphabet string to encrypt
     alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+#Encrypt the input message
+    passwordOrd = (ord(i) for i in password)
+    originalMessageOrd = ((ord(i) for i in originalMessage))
+    passwordLen = len(password)
+
+    for i in range(len(originalMessage)):
+        VigCipher = (originalMessageOrd(i) + passwordOrd(i % passwordLen)) % 26
+        encryptedMessage = encryptedMessage + alphabet[VigCipher]
+
+    print(encryptedMessage)
  
 
   
