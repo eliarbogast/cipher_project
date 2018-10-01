@@ -16,15 +16,19 @@ def main():
     password = input("Enter a password to encrypt this message: ")
 
 #Clean up both user inputs
-    originalMessage = message.lower()
-    originalMessage = message.replace(" ", "")
+    originalMessage = originalMessage.lower()
+    originalMessage = originalMessage.replace(" ", "")
     password = password.lower()
     password = password.replace(" ", "")
 
 #String to store encrypted characters
     encryptedMessage = " "
 
+#Alphabet string to encrypt 
     alphabet = "abcdefghijklmnopqrstuvwxyz"
+    
+#Encrypt the input message
+    for i in range(len(originalMessage)):
  
 
   
