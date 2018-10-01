@@ -21,31 +21,22 @@ def main():
 	password = password.lower()
 	password = password.replace(" ", "")
 
- # Create the code alphabet
-	# Remove duplicate letters from the password
-	# Idea: Look at each letter in turn. If we haven't seen it, copy it over to the new password storage string.
-	passwordNoDupes = ""
-	for ch in password:
-		if ch not in passwordNoDupes:
-			passwordNoDupes = passwordNoDupes + ch
-
-
 #String to store encrypted characters
 	encryptedMessage = " "
 
+#Create a string for the alphabet
+	alpha = "abcdefghijklmnopqrstuvwxyz"
+
+#Loop to adjust password length to work with any message
+	for i in range(len(originalMessage) - len(password)):
+		password = password + password[i]
+
+#Loop to encrypt the message input by the user
 	for i in range(len(originalMessage)):
-		ch_origin = originalMessage[i]
-		ch_pass = password[i]
+		encryptedChar = (alpha.index(originalMessage[i]) + alpha.index(password[i])) % 26
+		encryptedMessage = encryptedMessage + alpha[encryptedChar]
 
-		#Formula used below to simplify process without needing to create alphabet strings
-		encrypted_ord = (ord(ch_origin)+ord(ch_pass))%26
-		encryptedMessage = encryptedMessage + chr(encrypted_ord)
-		print(encryptedMessage)
-
-    print(encryptedMessage)
-
-	#Wait for user input to close the window
-	raw_input()
+	print(encryptedMessage)
 
 
 
