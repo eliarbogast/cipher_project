@@ -38,6 +38,9 @@ def main():
 		encryptedMessage = encryptedMessage + alpha[encryptedChar]
 
 	print("Your encrypted message is: ", encryptedMessage)
+	
+#String to store decrypted characters
+	decryptedMessage = " "
 
 #Decrypt the message
 	for i in range(len(encryptedMessage)):
