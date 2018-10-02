@@ -1,5 +1,6 @@
 '''
-Cipher Project: Takes user input message and password and encrypts it using a "Vignère Cipher"
+Cipher Project: Takes user input message and password and encrypts it using a "Vignère Cipher."
+                Afterwards the encrypted message is decrypted to ensure accuracy
 CS 111, Fall 2018
 date: October 2nd, 2018
 Names: Eli Arbogast and Drew Garcia
