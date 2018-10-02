@@ -41,7 +41,7 @@ def main():
 
 #Decrypt the message
 	for i in range(len(encryptedMessage)):
-		decryptedChar = (alpha.index(encryptedMessage[i]) - alpha.index(password[i]) % 26)
+		decryptedChar = (alpha.index(encryptedMessage[i]) - alpha.index(password[i])) % 26
 		decryptedMessage = decryptedMessage + alpha[decryptedChar]
 	print("Check -- your decrypted message is: ", decryptedMessage)
 	print("* * * END VIGNERE CIPHER * * *")
